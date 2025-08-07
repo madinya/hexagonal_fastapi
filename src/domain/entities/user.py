@@ -8,7 +8,7 @@ class User:
     id: UUID
     first_name: str
     last_name: str
-    email: str  # This will be stored lowercase
+    email: str  
     age: Optional[int] = None
 
     @classmethod

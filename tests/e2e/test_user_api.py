@@ -8,25 +8,6 @@ from src.main import app
 
 client = TestClient(app)
 
-
-@pytest.fixture
-def user_data():
-    return [
-        {
-            "first_name": "Test",
-            "last_name": "User",
-            "email": "test@example.com",
-            "age": 20,
-        },
-        {
-            "first_name": "Jane",
-            "last_name": "Doe",
-            "email": "jane@example.com",
-            "age": 25,
-        },
-    ]
-
-
 @pytest.fixture
 def user_create_input(user_data):
     return UserCreateInput(**user_data[0])  # Convert first user to Pydantic model

@@ -19,8 +19,7 @@ templates = Jinja2Templates(directory="src/infrastructure/api/templates")
 
 @app.get("/", response_class=HTMLResponse)
 async def read_root(request: Request):
-    # Check health status (simplified example)
-    health_status = "healthy"  # In real app, check actual services
+    health_status = "healthy" 
 
     return templates.TemplateResponse(
         "index.html",

@@ -11,12 +11,7 @@ class UserCreateInput(BaseModel):
     age: Optional[int] = Field(None, gt=0, lt=120)
 
 
-class UserResponse(BaseModel):
+class UserResponse(UserCreateInput):
     id: UUID
-    first_name: str
-    last_name: str
-    email: str
-    age: Optional[int]
-
     class Config:
         from_attributes = True
