@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>FastAPI Hexagonal Architecture</h1>
+    
+    <h2>API Status</h2>
+    <div class="health-status {% if health_status == 'healthy' %}healthy{% else %}unhealthy{% endif %}">
+        Status: {{ health_status|upper }}
+    </div>
+    <p>Last checked: {{ timestamp }}</p>
+    
+   
+{% endblock %}
