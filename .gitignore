@@ -27,3 +27,6 @@ logs/
 
 # System
 .DS_Store
+
+settings.json
+script.sh
